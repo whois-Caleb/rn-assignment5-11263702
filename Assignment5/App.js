@@ -1,17 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import safeViewAndroid from './styles/androidSafeView';
-import homeStyles from './styles/homePage';
-import parentScrollComponentStyles from './styles/parentScrollViewStylesheet';
+// App.js
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/homeScreen';
+import SettingsScreen from './screens/settingsScreen';
+import CardsScreen from './screens/cardsScreen';
+import StatisticsScreen from './screens/statisticsScreen';
 
-export default function App() {
+// Create the Bottom Tab Navigator
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <SafeAreaView style={safeViewAndroid.androidSafeArea}>
-    <View style={homeStyles.container}>
-      <StatusBar style="auto" />
-      <Text>Open up App.js to start working on your app!</Text>
-      
-    </View>
-    </SafeAreaView>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Statistics" component={StatisticsScreen} />
+      <Tab.Screen name="My Cards" component={CardsScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
   );
-};
+}
+
+function App() {
+  return (
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+  );
+}
+
+export default App;
