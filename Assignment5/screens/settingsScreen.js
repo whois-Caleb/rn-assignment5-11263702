@@ -11,19 +11,19 @@ const SettingsScreen = () => {
     <View style={[settingsStyles.container, isDarkTheme ? settingsStyles.darkContainer : settingsStyles.lightContainer]}>
      
         <StatusBar barStyle={isDarkTheme ? "light-content" : "dark-content"} />
-        <TouchableOpacity style={settingsStyles.option}>
+        <TouchableOpacity style={[settingsStyles.option, isDarkTheme ? settingsStyles.darkOption : settingsStyles.lightOption]}>
           <Text style={[settingsStyles.text, isDarkTheme ? settingsStyles.darkText : settingsStyles.lightText]}>Language</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={settingsStyles.option}>
+        <TouchableOpacity style={[settingsStyles.option, isDarkTheme ? settingsStyles.darkOption : settingsStyles.lightOption]}>
           <Text style={[settingsStyles.text, isDarkTheme ? settingsStyles.darkText : settingsStyles.lightText]}>My Profile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={settingsStyles.option}>
+        <TouchableOpacity style={[settingsStyles.option, isDarkTheme ? settingsStyles.darkOption : settingsStyles.lightOption]}>
           <Text style={[settingsStyles.text, isDarkTheme ? settingsStyles.darkText : settingsStyles.lightText]}>Contact Us</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={settingsStyles.option}>
+        <TouchableOpacity style={[settingsStyles.option, isDarkTheme ? settingsStyles.darkOption : settingsStyles.lightOption]}>
           <Text style={[settingsStyles.text, isDarkTheme ? settingsStyles.darkText : settingsStyles.lightText]}>Change Password</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={settingsStyles.option}>
+        <TouchableOpacity style={[settingsStyles.option, isDarkTheme ? settingsStyles.darkOption : settingsStyles.lightOption]}>
           <Text style={[settingsStyles.text, isDarkTheme ? settingsStyles.darkText : settingsStyles.lightText]}>Privacy Policy</Text>
         </TouchableOpacity>
   

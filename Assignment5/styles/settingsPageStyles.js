@@ -10,11 +10,16 @@ export default settingsStyles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   darkContainer: {
-    backgroundColor: '#333',
+    backgroundColor: '#161622',
   },
   option: {
     paddingVertical: 15,
     borderBottomWidth: 1,
+  },
+  darkOption: {
+    borderBottomColor: '#7b86a4',
+  },
+  lightOption: {
     borderBottomColor: '#ddd',
   },
   text: {
